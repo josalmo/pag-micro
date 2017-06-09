@@ -1,0 +1,332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Mongoose 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130920
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RADAM | Formulario</title>
+<link rel="shortcut icon" href="images/RADAM-logo.png">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="estilos/default2.css" rel="stylesheet" type="text/css" media="all" />
+<link href="estilos/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#"><strong>RADAM</strong></a></h1>
+		<span class="byline">Reporte automático de accidentes menores</span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li ><a href="inicio.html" accesskey="1" title="">INICIO</a></li>
+			<li class="current_page_item"><a href="formulario.html" accesskey="2" title="">Formulario</a></li>
+			<li><a href="inicio.html" accesskey="3" title="">CERRAR SESIÓN</a></li>
+			<li><a href="#" accesskey="4" title="">CONTÁCTENOS</a></li>
+		</ul>
+	</div>
+</div></div>
+<div id="page" class="container">
+	<div id="content">
+		<div class="title">
+		<br>
+			<h2>Formulario de Declaración de Accidente de Tránsito Menor</h2>
+			</div>
+
+<form>
+<ol>
+<br>
+<br>
+<br>
+<br>
+		<h3><a>Condiciones del accidente</a></h3>
+		<ol>
+		<br>
+		<br>
+		<h4>Fecha:</h4>
+			<label for="dia">Día:</label><input type="text" name="dia" size="2" maxlength="2">
+			<label for="mes">Mes:</label><input type="text" name="mes" size="2" maxlength="2">
+			<label for="ano">Año:</label><input type="text" name="ano" size="4" maxlength="4">
+			<label for="hora">Hora:</label><input type="text" name="hora" size="5" maxlength="5">
+			<input type="radio" name="horario" value="am"> am
+			<input type="radio" name="horario" value="pm"> pm<br>
+		<h4>Lugar:</h4>
+			<label for="provincia">Provincia:</label><input type="text" name="provincia"  size="10" maxlength="10">
+			<label for="canton">Cantón:</label>	<input type="text" name="canton" size="10" >
+			<label for="distrito">Distrito:</label><input type="text" name="distrito" size="10" >
+			<label for="barrio">Barrio:</label><input type="text" name="barrio" size="10"><br><br>
+		<h4>Indicaciones del trayecto:</h4>
+			<input type="radio" name="trayecto" value="recta"> Recta
+			<input type="radio" name="trayecto" value="curva"> Curva
+			<input type="radio" name="trayecto" value="pendiente"> Pendiente
+			<input type="radio" name="trayecto" value="nivel"> A nivel
+			<input type="radio" name="trayecto" value="intersección"> En intersección<br><br>
+		<h4>Indicaciones de la superficie:</h4>
+			<input type="radio" name="superficie" value="asfalto"> Asfalto
+			<input type="radio" name="superficie" value="lastre"> Lastre
+			<input type="radio" name="superficie" value="concreto"> Concreto
+			<input type="radio" name="superficie" value="tierra"> Tierra<br>
+			Otro, especifique:<input type="text" name="superficie"> <br>
+		<br><br><h4>Condiciones de la vía:</h4>
+			<input type="radio" name="via" value="humeda"> Húmeda
+			<input type="radio" name="via" value="seca"> Seca
+		  	<input type="radio" name="via" value="buenas"> Buenas
+		  	<input type="radio" name="via" value="malas"> Malas
+		<br><br><h4>Señales de tránsito:</h4>
+			<input type="radio" name="senales" value="si"> Sí
+			<input type="radio" name="senales" value="no"> No <br>
+			<input type="text" name="senales"> En caso de haber, especifique:
+		</ol>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h3><a>Conductor vehículo A</a></h3>
+		<br>
+		<br>
+		<ol>
+		<li>Nombre y apellidos:</li><input type="text" name="nombreA" size="30" >
+		<br><br><li>Tipo de identificación:</li>
+			Cédula<input type="radio" name="idtypeA" value="cedulaA" >
+			Dimex<input type="radio" name="idtypeA" value="dimexA"> <br>
+		  	Pasaporte del país de:<input type="text" name="idtypeA" size="5" >
+		  	Otro, especifique:<input type="text" name="idtypeA" size="5"> 
+		    Número de identificación:<input type="text" name="idA" size="5"><br><br>
+		Sexo:
+			<input type="radio" name="sexoA" value="M"> Mujer
+			<input type="radio" name="sexoA" value="H"> Hombre&emsp;&emsp;&emsp;
+		Edad:
+			<input type="text" name="edadA" size="2" maxlength="2">
+		Nacionalidad:
+			<input type="text" name="nacionalidadA" size="14">
+		<br>Lugar de residencia:
+			<input type="text" name="residenciaA" size="14" >
+		Lugar de trabajo:
+			<input type="text" name="trabajoA" size="14">
+		<br><br><li>Medios de contacto:</li>
+			&emsp;&emsp;Teléfono celular:     <input type="text" name="celularA" size="8">
+			Teléfono residencia:  <input type="text" name="telefonoresidenciaA" size="8">
+			<br>&emsp;&emsp;Teléfono trabajo:     <input type="text" name="telefonotrabajoA" size="8">
+			Correo electrónico:       <input type="text" name="correoA" size="14">
+		</ol>
+		<br>
+		<br><br>
+		<br>
+		<h3><a>Propietario vehículo A</a></h3>
+		<br>
+		<br>
+		<ol>
+		<li>Nombre y apellidos o razón social:</li>
+			<input type="text" name="duenoA">
+		<li>Tipo de identificación:</li>
+			<input type="text" name="idtypeduenoA">
+		<li>Número de identificación:</li>
+			<input type="text" name="idduenoA">
+		</ol>
+		<br>
+		<br><br>
+		<br>
+		<h3><a>Vehículo A</a></h3>
+		<br>
+		<br>
+		<ul>
+		<li>Placa:</li>
+			<input type="text" name="placaA">
+		<li>Color:</li>
+			<input type="text" name="colorA">
+		<li>Marca:</li>
+			<input type="text" name="marcaA">
+		<li>Modelo:</li>
+			<input type="text" name="modeloA">
+		<li>Año:</li>
+			<input type="text" name="anoA">
+		<li>Aseguradora(Cuando esté asegurado):</li>
+			<input type="text" name="seguroA">
+		<li>Número de póliza:</li>
+			<input type="text" name="polizaA">
+		</ul>
+<br>
+		<br><br>
+		<br>
+		<h3><a>Conductor vehículo B</a></h3>
+		<br>
+		<br>
+		<ol>
+		<li>Nombre y apellidos:</li><input type="text" name="nombreB" size="30" >
+		<br><br><li>Tipo de identificación:</li>
+			Cédula<input type="radio" name="idtypeB" value="cedulaB" >
+			Dimex<input type="radio" name="idtypeB" value="dimexB"> <br>
+		  	Pasaporte del país de:<input type="text" name="idtypeB" size="5" >
+		  	Otro, especifique:<input type="text" name="idtypeB" size="5"> 
+		    Número de identificación:<input type="text" name="idB" size="5"><br><br>
+		Sexo:
+			<input type="radio" name="sexoB" value="M"> Mujer
+			<input type="radio" name="sexoB" value="H"> Hombre&emsp;&emsp;&emsp;
+		Edad:
+			<input type="text" name="edadB" size="2" maxlength="2">
+		Nacionalidad:
+			<input type="text" name="nacionalidadB" size="14">
+		<br>Lugar de residencia:
+			<input type="text" name="residenciaB" size="14" >
+		Lugar de trabajo:
+			<input type="text" name="trabajoB" size="14">
+		<br><br><li>Medios de contacto:</li>
+			&emsp;&emsp;Teléfono celular:     <input type="text" name="celularB" size="8">
+			Teléfono residencia:  <input type="text" name="telefonoresidenciaB" size="8">
+			<br>&emsp;&emsp;Teléfono trabajo:     <input type="text" name="telefonotrabajoB" size="8">
+			Correo electrónico:       <input type="text" name="correoB" size="14">
+		</ol>
+		<br>
+		<br><br>
+		<br>
+		<h3><a>Propietario vehículo B</a></h3>
+		<br>
+		<br>
+		<ol>
+		<li>Nombre y apellidos o razón social:</li>
+			<input type="text" name="duenoB">
+		<li>Tipo de identificación:</li>
+			<input type="text" name="idtypeduenoB">
+		<li>Número de identificación:</li>
+			<input type="text" name="idduenoB">
+		</ol>
+		<br>
+		<br><br>
+		<br>
+		<h3><a>Vehículo B</a></h3>
+		<br>
+		<br>
+		<ul>
+		<li>Placa:</li>
+			<input type="text" name="placaB">
+		<li>Color:</li>
+			<input type="text" name="colorB">
+		<li>Marca:</li>
+			<input type="text" name="marcaB">
+		<li>Modelo:</li>
+			<input type="text" name="modeloB">
+		<li>Año:</li>
+			<input type="text" name="anoB">
+		<li>Aseguradora(Cuando esté asegurado):</li>
+			<input type="text" name="seguroB">
+		<li>Número de póliza:</li>
+			<input type="text" name="polizaB">
+		</ul>
+		<br>
+		<br><br>
+		<br>
+		<h3><a>Daños de los vehículos A y B</a></h3>
+		<br>
+		<br>
+		<img src="images/damages.jpg"/>
+		<br><br>
+		<ol>
+		<li>Indique con números los daños del vehículo A:</li>
+			<input type="checkbox" name="" value="1"> 1
+			<input type="checkbox" name="" value="2"> 2
+			<input type="checkbox" name="" value="3"> 3
+			<input type="checkbox" name="" value="4"> 4
+			<input type="checkbox" name="" value="5"> 5
+			<input type="checkbox" name="" value="6"> 6
+			<input type="checkbox" name="" value="7"> 7
+			<input type="checkbox" name="" value="8"> 8
+			<input type="checkbox" name="" value="9"> 9
+			<input type="checkbox" name="" value="10"> 10
+			<input type="checkbox" name="" value="11"> 11
+			<input type="checkbox" name="" value="12"> 12
+			<input type="checkbox" name="" value="13"> 13
+			<input type="checkbox" name="" value="14"> 14
+			<input type="checkbox" name="" value="15"> 15
+			<input type="checkbox" name="" value="16"> 16
+			<input type="checkbox" name="" value="17"> 17
+			<input type="checkbox" name="" value="18"> 18
+			<input type="checkbox" name="" value="19"> 19
+			<br>
+			<br>
+		<li>Indique con números los daños del vehículo B:</li>
+			<input type="checkbox" name="" value="1"> 1
+			<input type="checkbox" name="" value="2"> 2
+			<input type="checkbox" name="" value="3"> 3
+			<input type="checkbox" name="" value="4"> 4
+			<input type="checkbox" name="" value="5"> 5
+			<input type="checkbox" name="" value="6"> 6
+			<input type="checkbox" name="" value="7"> 7
+			<input type="checkbox" name="" value="8"> 8
+			<input type="checkbox" name="" value="9"> 9
+			<input type="checkbox" name="" value="10"> 10
+			<input type="checkbox" name="" value="11"> 11
+			<input type="checkbox" name="" value="12"> 12
+			<input type="checkbox" name="" value="13"> 13
+			<input type="checkbox" name="" value="14"> 14
+			<input type="checkbox" name="" value="15"> 15
+			<input type="checkbox" name="" value="16"> 16
+			<input type="checkbox" name="" value="17"> 17
+			<input type="checkbox" name="" value="18"> 18
+			<input type="checkbox" name="" value="19"> 19
+		</ol>
+		<br><br>
+		<h3><a>Vídeo del accidente:</a></h3>
+		<br><br>
+		 <video width="640" height="360" src="videos/Dra92.mp4" type="video/mp4" allowfullscreen controls="" preload=""></video> 
+		<!-- <iframe width="640" height="360" src="Dra92.mp4" frameborder="0" allowfullscreen></iframe>-->
+		<br><br>
+		</ol>
+		<h3><a>Los firmantes, de calidades indicadas en este documento, declaramos bajo fe de juramento, lo siguiente:</a></h3>
+		<ol>
+		<br><br>
+		<li>Que la responsabilidad de la colisión corresponde a:</li>
+			<input type="radio" name="responsabilidad" value="A"> Conductor A (El conductor A asume la reparación de ambos vehículos colisionados)<br>
+			<input type="radio" name="responsabilidad" value="B"> Conductor B (El conductor A asume la reparación de ambos vehículos colisionados)<br> 
+			<input type="radio" name="responsabilidad" value="AyB"> Ambos conductores por partes iguales (cada conductor asume la reparación del vehículo que conducía)<br>
+		<li>Que la información consignada en el documento refleja fielmente lo ocurrido.</li>
+		</ol>
+		<br><br>
+		<h3><a>Información de los testigos:</a></h3>
+		<br><br>
+		<ol>
+		<h4>Testigo 1:</h4>
+		<ol>
+		<li>Nombre testigo 1:</li>
+			<input type="text" name="testigoA">
+		<li>Cédula testigo 1:</li>
+			<input type="text" name="idtestigoA">
+		</ol>
+		<h4>Testigo 2:</h4>
+		<ol>
+		<li>Nombre testigo 2:</li>
+			<input type="text" name="testigoB">
+		<li>Cédula testigo 2:</li>
+			<input type="text" name="idtestigoB">
+		</ol>
+		</ol>
+
+
+<input name="button2" type="button" 
+onclick='alert("    ENVIO EXITOSO \n Por favor cierre la sesión")' value="Enviar Formulario" />
+
+
+</form>
+		</div>
+	</div>
+
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+</html>
