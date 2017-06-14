@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Mongoose 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130920
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RADAM | Registro</title>
+<link rel="shortcut icon" href="images/RADAM-logo.png">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="estilos/default2.css" rel="stylesheet" type="text/css" media="all" />
+<link href="estilos/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<style>
+	input, select {
+	    width: 300px;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ad8667;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	    font-size: 20px;
+	}
+
+	input:hover {
+	    background-color: #ad8667;
+	}
+
+	select:hover {
+	    background-color:  #ad8667;
+	}
+
+	input[type=date], select {
+	    width: 300px;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ad8667;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	}
+
+	button{
+	    width: 300px;
+	    background-color: #ad8667;
+	    color: white;
+	    padding: 14px 20px;
+	    margin: 0px;
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    text-align: center;
+	}
+
+	input[type=button1]{
+	    background-color: #ad8667; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 10px 100px 10px 0px ;
+	    cursor: pointer;
+	}
+
+	}
+
+	input[type=button]:hover {
+	    background-color: #663300;
+	}
+
+
+	/*div {
+	    border-radius: 5px;
+	    background-color: #f2f2f2;
+	    padding: 20px;
+	}*/
+</style>
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+</head>
+<body>
+<div id="header-wrapper">
+<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#"><strong>RADAM</strong></a></h1>
+		<span class="byline">Reporte automático de accidentes menores</span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li ><a href="inicio.html" accesskey="1" title="">INICIO</a></li>
+			<li class="current_page_item"><a href="registro.html" accesskey="2" title="">REGISTRO</a></li>
+			<li><a href="ingreso.html" accesskey="3" title="">INICIAR SESIÓN</a></li>
+			<li><a href="#" accesskey="4" title="">CONTÁCTENOS</a></li>
+		</ul>
+	</div>
+</div></div>
+<div id="page" class="container">
+	<div id="content">
+		<div class="title">
+		<br>
+			<h2>Página de Registro</h2>
+			</div>
+
+<form >
+	<label for="correo">Correo electrónico:</label><br>
+	<input type="email" name="correo" id="correo" placeholder="ejemplo@ejemplo.com"/>
+	<br>	
+	<label for="contraseña">Ingrese su contraseña:</label><br>
+	<input type="password" name="password" id="password" placeholder="contraseña"/>
+	<br>
+	<label for="nombre">Ingrese su nombre:</label><br>
+	<input type="text" name="nombre" id="nombre" placeholder="nombre"/>
+	<br>
+	<label for="cedula">cedula:</label><br>
+	<input type="text" name="cedula" id="cedula" placeholder="cedula"/>
+	<br>
+	<label for="placa">Placa del vehículo:</label><br>
+	<input type="text" name="placa" id="placa" placeholder="placa"/>
+	<br>
+	<label for="sexo">sexo:</label><br>
+	<select name="sexo" id="sexo">
+ 		 <option value="Hombre">Hombre</option>
+  		 <option value="Mujer">Mujer</option>
+	</select>
+	<br>	
+	<label for="radamid">Ingrese el código de identificación de su dispositivo:</label><br>
+	<input type="text" name="telefono" id="telefono" placeholder="id del dispositivo"/>
+	<br>	
+	
+	<br>
+	<!--<input type="submit" name="enviar" value="REGISTRAR"/>-->
+	
+	<button onclick="loadDoc()" >REGISTRAR</button> 
+</form>
+	</div>	
+	</div>
+
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+</body>
+<script>
+function loadDoc() {
+	//alert("ok")
+	var correo=document.getElementById("correo").value;
+	var nombre=document.getElementById("nombre").value;
+	var cedula=document.getElementById("cedula").value;
+	var password=document.getElementById("password").value;
+	var sexo=document.getElementById("sexo").value;
+	var placa=document.getElementById("placa").value;
+	var telefono=document.getElementById("telefono").value;
+  var xhttp = new XMLHttpRequest();
+  var params = "correo="+correo+ "&nombre="+nombre+"&cedula="+cedula+"&sexo="+sexo+
+  "&placa="+placa+"&telefono="+telefono+"&password="+password ;
+  
+  //alert(correo)
+  xhttp.open("POST", "http://localhost:8888/usuarios/nuevo", true);
+  //Send the proper header information along with the request
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      window.location.replace("registro.html");
+      alert(this.responseText)
+      if (this.responseText == "true"){
+      	alert("Usuario Registrado")
+      }else{
+      	alert("No se ha podido registrar el usuario")
+      }
+
+    }
+  };
+
+  xhttp.send(params)
+}
+</script>
+</html>

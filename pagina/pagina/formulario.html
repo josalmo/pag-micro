@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>RADAM | Formulario</title>
+<link rel="shortcut icon" href="images/RADAM-logo.png">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link href="estilos/default2.css" rel="stylesheet" type="text/css" media="all" />
+<link href="estilos/fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<style>
+	input, select {
+	    width: 300px;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ad8667;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	    font-size: 20px;
+	}
+
+	input:hover {
+	    background-color: #ad8667;
+	}
+
+	select:hover {
+	    background-color:  #ad8667;
+	}
+
+	input[type=date], select {
+	    width: 300px;
+	    padding: 12px 20px;
+	    margin: 8px 0;
+	    display: inline-block;
+	    border: 1px solid #ad8667;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	}
+
+	input[type=button] {
+	    width: 300px;
+	    background-color: #ad8667;
+	    color: white;
+	    padding: 14px 20px;
+	    margin: 40px 400px;
+	    border: none;
+	    border-radius: 4px;
+	    cursor: pointer;
+	    text-align: center;
+	}
+
+	input[type=button1]{
+	    background-color: #ad8667; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    margin: 10px 100px 10px 0px ;
+	    cursor: pointer;
+	}
+
+	}
+
+	input[type=button]:hover {
+	    background-color: #663300;
+	}
+
+
+	/*div {
+	    border-radius: 5px;
+	    background-color: #f2f2f2;
+	    padding: 20px;
+	}*/
+</style>
+
+<script type="text/javascript">
+		
+		function getURLParameter(name) {
+		  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+		}
+
+        function codeAddress() {
+
+
+
+ 			var xhttp = new XMLHttpRequest();
+        	xhttp.open("POST", "http://localhost:8888/usuarios/get", true);
+        	correo = getURLParameter('correo');
+        	var params = "correo="+correo;
+
+        	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        	xhttp.onreadystatechange = function() {
+		    
+		    if (this.readyState == 4 && this.status == 200) {
+		    	document.getElementById("nombreA").value= JSON.parse(this.responseText).nombre
+		    	document.getElementById("correoA").value= JSON.parse(this.responseText).correo
+		    	document.getElementById("cedulaA").value= JSON.parse(this.responseText).cedula
+		    	document.getElementById("sexoA").value= JSON.parse(this.responseText).sexo
+		    	document.getElementById("placaA").value= JSON.parse(this.responseText).placa
+		        document.getElementById("video").src= "videos/"+JSON.parse(this.responseText).telefono+".mp4"
+		    	alert(this.responseText)
+		      }
+		    }
+		    xhttp.send(params)
+        }
+
+        function enviarForm(){
+        	alert("ok")
+
+
+        }
+
+        function searchForm(){
+        	alert("buscar")
+
+
+        }
+
+        function newForm(){
+        	document.getElementById("contenido").style.display='block' 
+        	alert("nuevo")
+        }
+
+        window.onload = codeAddress;
+</script>
+
+</head>
+
+
+
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+	<div id="logo">
+		<h1><a href="#"><strong>RADAM</strong></a></h1>
+		<span class="byline">Reporte automático de accidentes menores</span>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="#" accesskey="2" title="">Formulario</a></li>
+			<li><a href="inicio.html" accesskey="3" title="">CERRAR SESIÓN</a></li>
+			<li><a href="#" accesskey="4" title="">CONTÁCTENOS</a></li>
+		</ul>
+	</div>
+	</div>
+</div>
+
+<div id="page" class="container" >
+	<div id="content">
+		
+
+		<!--<div>
+			<h3><a>Buscar Formulario</a></h3>
+			<label for="formu">Numero de formulario:</label><br>
+			<input type="text" name="formu"  size="10" maxlength="10"><br>
+			<input type="button1" value= "Nuevo formulario" onclick=newForm() /> 
+			<input type="button1" value= "Buscar" onclick=searchForm() />
+		</div>
+		<br><br><br>
+
+		
+		<div id="contenido" style="display: none;">-->
+		<div id="contenido">
+			<div class="title">
+				<h2 id="titulodep">Formulario de Declaración de Accidente de Tránsito Menor</h2>
+			</div>
+			<!--
+			<label for="formu">Numero de formulario:</label><br>
+			<input type="text" name="provincia"  size="10" maxlength="10"><br>
+			<br>-->
+			
+			<h3><a>Condiciones del accidente</a></h3>
+			
+			<br>
+
+			<div style="margin: 0px auto; width: 100%">
+				<div style="float:left; margin: 0; width: 50%">
+					<label for="Fecha">Fecha:</label>
+					<br><input type="date" name="dia" size="2" maxlength="2"><br>
+				</div>
+
+				<div style="float:left; margin: 0; width: 50%">
+					<label for="Lugar">Lugar:</label>
+					<br><input type="text" name="provincia"  size="10" maxlength="10"><br>
+				</div>
+				<br><br>
+			</div>
+
+			<br><br><br><br>
+
+			<div style="margin: 0px auto; width: 100%">
+				<div style="float:left; margin: 0; width: 50%">
+					<h3><a>Conductor vehículo A</a></h3><br>
+			
+					Nombre y apellidos:<br><input type="text" name="nombreA" id="nombreA" size="30" ><br>
+					Cédula:<br><input type="text" id="cedulaA" name="cedulaA" size="5"><br>
+					Sexo:<br><select name="sexoA" id="sexoA">
+			 		<option value="Hombre">Hombre</option>
+			  		<option value="Mujer">Mujer</option>
+					</select><br>
+					Edad:<br><input type="text" name="edadA" size="2" maxlength="2"><br>
+					Correo electrónico:<br><input type="text" name="correoA" id="correoA" size="20"><br>
+					Placa:<br><input type="text" name="placaA" id="placaA"><br>
+					</ul><br><br><br><br>
+				</div>
+
+				<div style="float:left; margin: 0; width: 50%">
+					<h3><a>Conductor vehículo B</a></h3><br>
+
+					Nombre y apellidos:<br><input type="text" name="nombreB" size="30" ><br>
+					
+					Cédula:<br><input type="text" name="idB" size="5"><br>
+					Sexo:<br><select name="sexo" id="sexo">
+			 		<option value="Hombre">Hombre</option>
+			  		<option value="Mujer">Mujer</option>
+					</select><br>
+					Edad:<br><input type="text" name="edadB" size="2" maxlength="2"><br>
+					Correo electrónico:<br><input type="text" name="correoB" size="20"><br>
+					Placa:<br><input type="text" name="placaB">
+				</div>
+			</div>
+
+			<br><br><br><br>
+			<div style="float: left;">
+				<h3><a>Daños de los vehículos A y B</a></h3>
+				<br><br>
+				<img style="margin: 10px 150px" src="images/damages.jpg"/>
+				<br><br><br>
+
+				<div style="margin: 0px auto; width: 100%">
+					<div style="float:left; margin: 0; width: 50%">
+						<label>Indique con números los daños del vehículo A:</label><br>
+						<input type="text" id="danoA"><br><br>
+					</div>
+
+					<div style="float:left; margin: 0; width: 50%">
+						<label>Indique con números los daños del vehículo B:</label><br>
+						<input type="text" id="danoB"><br><br>
+					</div>
+					<br><br>
+				</div>
+
+				<br><br><br><br>
+
+				<h3><a>Vídeo del accidente:</a></h3>
+				<br><br>
+				<video width="640" height="360" id=video type="video/mp4" allowfullscreen controls="" preload=""></video> 
+
+				<br><br>
+				
+				<h3><a>Los firmantes, de calidades indicadas en este documento, declaramos bajo fe de juramento, lo siguiente:</a></h3>
+				
+				<br><br>
+				Que la responsabilidad de la colisión corresponde a:
+				<br>
+
+				<select name="sexo" id="sexo" style="width: 800px">
+		 			<option name="responsabilidad" value="A"> Conductor A (El conductor A asume la reparación de ambos vehículos colisionados)</option>
+		  			<option name="responsabilidad" value="B"> Conductor B (El conductor A asume la reparación de ambos vehículos colisionados)</option>
+		  			<option name="responsabilidad" value="AyB"> Ambos conductores por partes iguales (cada conductor asume la reparación del vehículo que conducía)</option>
+				</select>
+
+				<br>
+				<a>Que la información consignada en el documento refleja fielmente lo ocurrido.</a>
+				
+				<br><br>
+				
+
+				<input name="button2" type="button" value= "Enviar Formulario" onclick=enviarForm() /> 
+			</div>	
+		</div>
+	</div>
+</div>
+
+<div id="copyright">
+</div>
+
+</body>
+
+</html>
